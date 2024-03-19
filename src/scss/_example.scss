@@ -1,0 +1,203 @@
+.example {
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .tab-content {
+    background-color: $light-50 !important;
+
+    @at-root .dark-theme & {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+
+  code[class*='language-'],
+  pre[class*='language-'] {
+    font-size: 0.875rem !important;
+  }
+
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background: transparent;
+  }
+
+  & + p {
+    margin-top: 1.5rem;
+  }
+
+  // Components examples
+  .preview,
+  .preview .col {
+    + p {
+      margin-top: 2rem;
+    }
+
+    > .form-control {
+      + .form-control {
+        margin-top: 0.5rem;
+      }
+    }
+
+    > .nav + .nav,
+    > .alert + .alert,
+    > .navbar + .navbar,
+    > .progress + .progress {
+      margin-top: 1rem;
+    }
+
+    > .dropdown-menu {
+      position: static;
+      display: block;
+  
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    // Images
+    > svg + svg,
+    > img + img {
+      margin-left: 0.5rem;
+    }
+
+    // Buttons
+    > .btn,
+    > .btn-group {
+      margin: 0.25rem 0.125rem;
+      color: #f3f5fa;
+    }
+    > .btn-toolbar + .btn-toolbar {
+      margin-top: 0.5rem;
+      color: #f3f5fa;
+    }
+
+    // List groups
+    > .list-group {
+      max-width: 400px;
+    }
+
+    > [class*='list-group-horizontal'] {
+      max-width: 100%;
+    }
+
+    // Navbars
+    .fixed-top,
+    .sticky-top {
+      position: static;
+      margin: -1rem -1rem 1rem;
+    }
+
+    .fixed-bottom {
+      position: static;
+      margin: 1rem -1rem -1rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .fixed-top,
+      .sticky-top {
+        margin: -1.5rem -1.5rem 1rem;
+      }
+      .fixed-bottom {
+        margin: 1rem -1.5rem -1.5rem;
+      }
+    }
+
+    // Pagination
+    .pagination {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.header > .container-fluid:first-child {
+  background-color: #695cd5;
+}
+
+.header-nav .nav-link.active {
+  color: #f3f5fa;
+}
+
+.header-nav .nav-link {
+  color: #f3f5fa;
+}
+
+.header-toggler .icon {
+  color: #f3f5fa;
+}
+
+.sidebar {
+  background-color: #ffffff;
+}
+
+.sidebar-nav .nav-link.active {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-link.active :hover {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-link {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-item :hover,
+.sidebar-nav .nav-item .nav-link .nav-icon :hover,
+.sidebar-nav .nav-group :hover {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-link.active .nav-icon,
+.sidebar-nav .nav-link.active .nav-icon :hover {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-link .nav-icon,
+.simplebar-content .nav-group .nav-link .nav-icon,
+.sidebar-nav .nav-link :hover,
+.sidebar-nav .nav-link .nav-icon :hover,
+html:not([dir='rtl']) .sidebar-nav .nav-icon:first-child :hover {
+  color: #213f9a !important;
+}
+
+.sidebar-nav .nav-title {
+  color: #213f9a;
+}
+
+.header {
+  padding: 0rem !important;
+}
+
+.sidebar-brand {
+  background: #695cd5 !important;
+}
+
+.header .container-fluid:first-child {
+  min-height: 4rem !important;
+}
+
+.simplebar-content .nav-item,
+.simplebar-content .nav-group {
+  border-top: 1px solid #e9ecef;
+}
+
+.sidebar-nav .nav-group.show .nav-group-toggle {
+  color: #213f9a;
+}
+
+.sidebar-nav .nav-group-toggle::after {
+  background-image: url('./icon6.png') !important;
+}
+.sidebar-nav .hide{
+    position: relative;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    width: 80px!important;
+}
